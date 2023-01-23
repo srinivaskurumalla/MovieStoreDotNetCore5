@@ -35,6 +35,8 @@ namespace MovieStore
 
             //Resoleve DI
             services.AddScoped<IRepository<Movie>, MovieRepository>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
